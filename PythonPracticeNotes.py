@@ -483,31 +483,31 @@ print(f"Balance after {time} year/s: ${total:.2f}")
 #    else:
 #        print(x)
 
-# Countdown
+# Countdown Timer
 
 import time
 
-while True:
-    my_time = int(input("Enter the time in seconds: "))
-    for x in range(my_time, 0, -1):
-        seconds = x % 60
-        minutes = int(x / 60) % 60
-        hours = int(x / 3600) % 24
-        days = int(x / 86400)
-        print(f"Days: {days:02} Hours:{hours:02} Minutes:{minutes:02} Seconds:{seconds:02}")
-        time.sleep(1)
+#while True:
+#    my_time = int(input("Enter the time in seconds: "))
+#    for x in range(my_time, 0, -1):
+#        seconds = x % 60
+#        minutes = int(x / 60) % 60
+#        hours = int(x / 3600) % 24
+#        days = int(x / 86400)
+#        print(f"Days: {days:02} Hours:{hours:02} Minutes:{minutes:02} Seconds:{seconds:02}")
+#        time.sleep(1)
 
-    print("Time's Up!")
+#    print("Time's Up!")
 
-    again = input("Would you like to set another Countdown? yes/no: ")
-    if again.lower() != "yes":
-        break
+#    again = input("Would you like to set another Countdown? yes/no: ")
+#    if again.lower() != "yes":
+#        break
 
 # Year to Day conversion
 #while True:
-#    years = int(input("Enter the amount of years you would like to convert to days: "))
+#    years = float(input("Enter the amount of years you would like to convert to days: "))
 #    days = years * 365
-#    print(f"there are {days} days in {years} years")#\
+#    print(f"there are about {days} days in {years} years")#\
 
 #    again = input("Would you like to do another conversion? yes/no: ")
 #    if again.lower() != "yes":
