@@ -389,7 +389,7 @@ import math
 #last_digits = credit_number[-4:]
 #print(f"XXXX-XXXX-XXXX-{last_digits}")
 
-# Format Specifiers = {value:flags} format a value absed on what flags are inserted
+# Format Specifiers = {value:flags} format a value based on what flags are inserted
 
 #price1 = 3.14159
 #price2 = -987.65
@@ -429,7 +429,103 @@ import math
 #    num = int(input("Enter a # between 1 - 10: "))
 #print(f"Your number is {num}")
 
-# Day 7: Compound Interest Calculator/For Loops/Lists, Sets, Tuples/Shopping Cart Program
+# Day 7: Compound Interest Calculator/For Loops/countdown timer
+# Instead of using while principle <= 0, if you would like to incorperate the number 0, just use while True. Do not do while principle = 0
+#       while True will prompt the code to run nomatter the value of the principle
+
+principle = 0
+rate = 0
+time = 0
+
+while True:
+    principle = float(input("Enter the principle amount: "))
+    if principle < 0:
+        print("Principle can't be less than or equal to zero")
+    else:
+        break
+while True:
+    rate = float(input("Enter the rate amount: "))
+    if rate < 0:
+        print("Interest rate can't be less than or equal to zero")
+    else:
+        break
+while True:
+    time = int(input("Enter the time in years amount: "))
+    if time < 0:
+        print("Time can't be less than or equal to zero")
+    else:
+        break
+total = principle * pow((1 + rate / 100), time)
+print(f"Balance after {time} year/s: ${total:.2f}")
+
+# For Loop = execute a block of code a fixed number of times.
+#       You can iterate over a range, string, sequence, etc.
+#               for example
+#                       for i in range(5):
+#                       print("Hello!")
+#               This will print helly 5 times
+# using reversed(range (1, 10)): will count in reverse
+# The 3rd number in a range is how much you are counting by. (1, 11, 2) is counting from 1-10 in incriments of 2
+# continue is used to skip over
+# break will break out of loop and stop the process
 
 
-# Day 8: asd asd s
+#credit_card = "1234-5678-9012-3456"
+
+#for x in credit_card:
+#    print (x)
+
+#for x in range(1, 21):
+#    if x == 13:
+#        continue
+#    if x == 15:
+#        break
+#    else:
+#        print(x)
+
+# Countdown
+
+import time
+
+while True:
+    my_time = int(input("Enter the time in seconds: "))
+    for x in range(my_time, 0, -1):
+        seconds = x % 60
+        minutes = int(x / 60) % 60
+        hours = int(x / 3600) % 24
+        days = int(x / 86400)
+        print(f"Days: {days:02} Hours:{hours:02} Minutes:{minutes:02} Seconds:{seconds:02}")
+        time.sleep(1)
+
+    print("Time's Up!")
+
+    again = input("Would you like to set another Countdown? yes/no: ")
+    if again.lower() != "yes":
+        break
+
+# Year to Day conversion
+#while True:
+#    years = int(input("Enter the amount of years you would like to convert to days: "))
+#    days = years * 365
+#    print(f"there are {days} days in {years} years")#\
+
+#    again = input("Would you like to do another conversion? yes/no: ")
+#    if again.lower() != "yes":
+#        break
+
+
+# Day 8: Nested Loop/Lists, Seats, and Tuples/Shopping Cart Program
+# nested loop =
+
+# Day 9: 2D Collections/Quiz Game/Dictionaries/Concession Stand Program
+# Day 10: Random Numbers/Number Guessing Game/ Rock, Paper, Scissors Game/Dice Roller Program
+# Day 11: Functions/Default Arguments/Keyword Arguments/Args & **Kwards
+# Day 12: Iterables/Membership Operators/List Comprehensions/Match-Case Statements
+# Day 13: Modules/Scope Resolution/If name == 'main'/Slot Machine/Encryption Program
+# Day 14: Hangman Game/Python Object Oriented Programming/Class Variables/Inheritance/Multiple Inheritance
+# Day 15: super()/Polymorphism/Duck Typing/Static Methods/Class Methods/Magic Methods
+# Day 16: Property/Decorators/Exception Handling/File Detection/Writing Files/Reading Files
+# Day 17: Dates & Times/Alarm Clock/Multithreading/Request API Data
+# Day 18: PyQt5 GUI Intro/PyQt5 Lables/PyQt5 Images/PyQt5 Layout Managers/PyQt5 Buttons
+# Day 19: PyQt5 Checkboxes/PyQt5Radio Buttons/PyQt5 Line Edits/PyQt5 CSS Styles
+# Day 20: Digital Clock Program/Stopwatch Program/Weather API App
