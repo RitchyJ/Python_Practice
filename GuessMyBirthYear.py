@@ -1,6 +1,5 @@
 import time
 from datetime import datetime
-from turtledemo.penrose import start
 
 while True:
     start = input("Would you like me to guess your birth year?: ")
@@ -14,7 +13,7 @@ while True:
         time.sleep(.2)
         print(f"Hello {name}, Welcome back.")
         time.sleep(.5)
-# You can enclose the input into a typecast to not take extra lines
+
         while True:
             try:
                 age = int(input("Enter your age: "))
