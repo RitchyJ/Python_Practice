@@ -50,23 +50,27 @@ score_b = 0
 # Function
 def paddle_a_up():
     y = paddle_a.ycor()
-    y += 40
-    paddle_a.sety(y)
+    if y < 225:
+        y += 40
+        paddle_a.sety(y)
 
 def paddle_a_down():
     y = paddle_a.ycor()
-    y -= 40
-    paddle_a.sety(y)
+    if y > -225:
+        y -= 40
+        paddle_a.sety(y)
 
 def paddle_b_up():
     y = paddle_b.ycor()
-    y += 40
-    paddle_b.sety(y)
+    if y < 225:
+        y += 40
+        paddle_b.sety(y)
 
 def paddle_b_down():
     y = paddle_b.ycor()
-    y -= 40
-    paddle_b.sety(y)
+    if y > -225:
+        y -= 40
+        paddle_b.sety(y)
 # Keyboard binding
 win.listen()
 win.onkeypress(paddle_a_up, "w")
