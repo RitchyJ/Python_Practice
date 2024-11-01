@@ -29,6 +29,7 @@ while True:
             had_birthday = input("Have you had your birthday yet this year? (yes/no): ")
             if had_birthday.lower() == "yes":
                 birth_year = current_year - age
+                break
             elif had_birthday.lower() == "no":
                 birth_year = current_year - age - 1
                 break
